@@ -11,7 +11,7 @@ from coinbase.wallet.client import Client
 
 import requests
 
-class BitcoinPrice:
+class CryptoCoinPrice:
     def __init__(self):
 
         self.ind = AppIndicator.Indicator.new(
@@ -65,5 +65,5 @@ class BitcoinPrice:
         Gtk.main()
 
 if __name__ == "__main__":
-    ind = BitcoinPrice()
+    ind = CryptoCoinPrice()
     ind.main()

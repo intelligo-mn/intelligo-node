@@ -5,5 +5,5 @@ An Ubuntu desktop indicator (top bar widget) that displays prices of Bitcoin as 
 ### Installation
 
 ```
-python bitcoin.py 
+python indicator.py 
 ```

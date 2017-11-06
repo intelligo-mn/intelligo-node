@@ -7,8 +7,6 @@ try:
 except:
     from gi.repository import AppIndicator
 from urllib2 import urlopen
-from coinbase.wallet.client import Client
-
 import requests
 
 class CryptoCoinPrice:

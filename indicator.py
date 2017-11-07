@@ -13,7 +13,7 @@ class CryptoCoinPrice:
     def __init__(self):
 
         self.ind = AppIndicator.Indicator.new(
-            "btc-mongolia",
+            "cryptocoin-mongolia",
             os.path.dirname(os.path.realpath(__file__)) + "/bitcoin.png",
             AppIndicator.IndicatorCategory.SYSTEM_SERVICES
         )
@@ -26,13 +26,13 @@ class CryptoCoinPrice:
         self.menu = Gtk.Menu()
 
         item = Gtk.MenuItem()
-        item.set_label("Шинэчлэх")
+        item.set_label("Refresh")
         item.connect("activate", self.handler_menu_reload)
         item.show()
         self.menu.append(item)
 
         item = Gtk.MenuItem()
-        item.set_label("Хаах")
+        item.set_label("Exit")
         item.connect("activate", self.handler_menu_exit)
         item.show()
         self.menu.append(item)
@@ -48,11 +48,11 @@ class CryptoCoinPrice:
 
     def handler_timeout(self):
         try:
-            url = 'https://api.coinbase.com/v2/prices/spot?currency=MNT'
+            url = 'https://api.coinbase.com/v2/prices/spot?currency=USD'
             response = requests.get(url)
             json = response.json()
 
-            status_message = " Авах: "+str(json['data']['amount'])+" "+str(json['data']['currency'])
+            status_message = " Buy: "+str(json['data']['amount'])+" "+str(json['data']['currency'])
             self.ind.set_label(status_message, "")
         except Exception, e:
             print str(e)

@@ -6,9 +6,9 @@ An Ubuntu desktop indicator (top bar widget) that displays prices of Cryptocoin 
 
 Ubuntu 17.10
 
-![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/ubuntu_17.10.png)
+![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/img/screen.png)
 
-![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/screen1.png)
+![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/img/screen1.png)
 
 ### Installation
 

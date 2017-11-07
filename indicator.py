@@ -14,7 +14,7 @@ class CryptoCoinPrice:
 
         self.ind = AppIndicator.Indicator.new(
             "cryptocoin-mongolia",
-            os.path.dirname(os.path.realpath(__file__)) + "/bitcoin.png",
+            os.path.dirname(os.path.realpath(__file__)) + "/img/bitcoin.png",
             AppIndicator.IndicatorCategory.SYSTEM_SERVICES
         )
         self.ind.set_status(AppIndicator.IndicatorStatus.ACTIVE)

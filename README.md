@@ -8,6 +8,8 @@ Ubuntu 17.10
 
 ![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/ubuntu_17.10.png)
 
+![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/screen1.png)
+
 ### Installation
 
 ```

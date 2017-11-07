@@ -1,6 +1,6 @@
-## Bitcoin Price Indicator
+## Cryptocoin Price Indicator
 
-An Ubuntu desktop indicator (top bar widget) that displays prices of Bitcoin as on the COINBASE DIGITAL API.
+An Ubuntu desktop indicator (top bar widget) that displays prices of Cryptocoin as on the COINBASE API.
 
 ### Installation
 

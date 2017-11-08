@@ -4,7 +4,7 @@ An Ubuntu desktop indicator (top bar widget) that displays prices of Cryptocoin 
 
 ### Screen 
 
-Ubuntu 17.10
+Ubuntu 17.10 Screen shot
 
 ![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/img/screen.png)
 

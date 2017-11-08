@@ -8,13 +8,14 @@ except:
     from gi.repository import AppIndicator
 from urllib2 import urlopen
 import requests
+from array import array
 
 class CryptoCoinPrice:
     def __init__(self):
 
         self.ind = AppIndicator.Indicator.new(
             "cryptocoin-mongolia",
-            os.path.dirname(os.path.realpath(__file__)) + "/img/bitcoin.svg",
+            os.path.dirname(os.path.realpath(__file__)) + "/img/btc.png",
             AppIndicator.IndicatorCategory.SYSTEM_SERVICES
         )
         self.ind.set_status(AppIndicator.IndicatorStatus.ACTIVE)
@@ -28,6 +29,12 @@ class CryptoCoinPrice:
         item = Gtk.MenuItem()
         item.set_label("Refresh")
         item.connect("activate", self.handler_menu_reload)
+        item.show()
+        self.menu.append(item)
+
+        item = Gtk.MenuItem()
+        item.set_label("About")
+        item.connect("activate", self.about_window)
         item.show()
         self.menu.append(item)
 
@@ -46,16 +53,37 @@ class CryptoCoinPrice:
     def handler_menu_reload(self, evt):
         self.handler_timeout()
 
+    def about_window(self, source):
+        dialog = Gtk.AboutDialog()
+
+        dialog.set_program_name('Cryptocoin Price')
+        dialog.set_version('1.0.0')
+        dialog.set_copyright('Copyright 2017 Techstar, Inc.')
+        dialog.set_license('MIT License\nCopyright (c) 2017 Techstar, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.')
+        dialog.set_wrap_license(True)
+        dialog.set_comments('An Ubuntu desktop indicator displays prices of Bitcoin, Ethereum, Litecoin etc.')
+        dialog.set_website('https://github.com/techstar-inc/cryptocoin-price')
+        
+        dialog.run()
+        dialog.destroy()
+
     def get_price (self, currency_pair):
         url = 'https://api.coinbase.com/v2/prices/'+currency_pair+'/spot'
         response = requests.get(url)
         json = response.json()
-        return str(json['data']['amount'])+" "+str(json['data']['currency'])
+        return str(json['data']['base'])+"-"+str(json['data']['amount'])+""+self.set_currency(str(json['data']['currency']))
+    
+    def set_currency(self, currency):
+        if currency == 'EUR':
+            return u'\u20AC'
+        elif currency == 'USD':
+            return u'\u0024'
+        else:
+            return currency
 
     def handler_timeout(self):
         try:
-            status_message = self.get_price('BTC-USD')+" "+self.get_price('ETH-USD')+" "+self.get_price('LTC-USD')
-            self.ind.set_label(status_message, "")
+            self.ind.set_label(self.get_price('BTC-USD')+" | "+self.get_price('ETH-USD')+" | "+self.get_price('LTC-USD'), "")
         except Exception, e:
             print str(e)
             self.ind.set_label("!", "")

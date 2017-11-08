@@ -14,7 +14,7 @@ class CryptoCoinPrice:
 
         self.ind = AppIndicator.Indicator.new(
             "cryptocoin-mongolia",
-            os.path.dirname(os.path.realpath(__file__)) + "/img/bitcoin.png",
+            os.path.dirname(os.path.realpath(__file__)) + "/img/bitcoin.svg",
             AppIndicator.IndicatorCategory.SYSTEM_SERVICES
         )
         self.ind.set_status(AppIndicator.IndicatorStatus.ACTIVE)
@@ -46,13 +46,15 @@ class CryptoCoinPrice:
     def handler_menu_reload(self, evt):
         self.handler_timeout()
 
+    def get_price (self, currency_pair):
+        url = 'https://api.coinbase.com/v2/prices/'+currency_pair+'/spot'
+        response = requests.get(url)
+        json = response.json()
+        return str(json['data']['amount'])+" "+str(json['data']['currency'])
+
     def handler_timeout(self):
         try:
-            url = 'https://api.coinbase.com/v2/prices/spot?currency=USD'
-            response = requests.get(url)
-            json = response.json()
-
-            status_message = " Buy: "+str(json['data']['amount'])+" "+str(json['data']['currency'])
+            status_message = self.get_price('BTC-USD')+" "+self.get_price('ETH-USD')+" "+self.get_price('LTC-USD')
             self.ind.set_label(status_message, "")
         except Exception, e:
             print str(e)

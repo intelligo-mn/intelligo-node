@@ -18,7 +18,7 @@ class CryptoCoinPrice:
             os.path.dirname(os.path.realpath(__file__)) + "/img/btc.png",
             AppIndicator.IndicatorCategory.SYSTEM_SERVICES
         )
-        self.ind.set_status(AppIndicator.IndicatorStatus.ACTIVE)
+        self.ind.set_status(AppIndicator.IndicatorStatus.ACTIVE)   
         self.build_menu()
         self.handler_timeout()
         GLib.timeout_add_seconds(60 * 5, self.handler_timeout)
@@ -55,11 +55,17 @@ class CryptoCoinPrice:
 
     def about_window(self, source):
         dialog = Gtk.AboutDialog()
-
         dialog.set_program_name('Cryptocoin Price')
         dialog.set_version('1.0.0')
         dialog.set_copyright('Copyright 2017 Techstar, Inc.')
-        dialog.set_license('MIT License\nCopyright (c) 2017 Techstar, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.')
+        dialog.set_license('MIT License\n'+
+            'Copyright (c) 2017 Techstar, Inc.\n\n'+
+            'Permission is hereby granted, free of charge, to any person obtaining a \n'+
+            'copy of this software and associated documentation files (the "Software"), \n'+
+            'to deal in the Software without restriction, including without limitation \n'+
+            'the rights to use, copy, modify, merge, publish, distribute, sublicense, \n'+
+            'and/or sell copies of the Software, and to permit persons to whom the \n'+
+            'Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.')
         dialog.set_wrap_license(True)
         dialog.set_comments('An Ubuntu desktop indicator displays prices of Bitcoin, Ethereum, Litecoin etc.')
         dialog.set_website('https://github.com/techstar-inc/cryptocoin-price')

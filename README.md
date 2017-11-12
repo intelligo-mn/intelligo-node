@@ -13,7 +13,7 @@ Ubuntu 17.10 Screen shot
 ### Installation
 
 ```
-sudo apt-get install --reinstall python-gi
+sudo apt-get install python-gi
 sudo apt-get install python-requests
 ```
 

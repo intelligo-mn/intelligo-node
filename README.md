@@ -20,3 +20,9 @@ sudo apt-get install python-requests
 ```
 python indicator.py 
 ```
+
+### Or 
+```
+make install
+make run
+```

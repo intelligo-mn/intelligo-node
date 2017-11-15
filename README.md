@@ -7,7 +7,7 @@
      <a href="https://github.com/techstar-inc/cryptocoin-price/fork">
         <img src="https://img.shields.io/github/forks/techstar-inc/cryptocoin-price.svg?style=social&label=Fork"
             alt="Forks"></a>
-    <a href="https://github.com/techstar-inc/cryptocoin-price/stargers">
+    <a href="https://github.com/techstar-inc/cryptocoin-price/stargazers">
         <img src="https://img.shields.io/github/stars/techstar-inc/cryptocoin-price.svg?style=social&label=Stars"
             alt="Stars"></a>
     <a href="https://github.com/tortuvshin/">

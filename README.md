@@ -35,11 +35,12 @@ Ubuntu 17.10 Screen shot
 ### Installation
 
 ```
+git clone https://github.com/techstar-inc/cryptocoin-price.git
+cd cryptocoin-price
+
 sudo apt-get install python-gi
 sudo apt-get install python-requests
-```
 
-```
 python indicator.py 
 ```
 

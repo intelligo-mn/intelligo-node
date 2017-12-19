@@ -31,7 +31,6 @@ Ubuntu 17.10 Screen shot
 
 ![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/img/screen3.png)
 
-![screenshot](https://github.com/techstar-inc/cryptocoin-price/blob/master/img/screen1.png)
 
 ### Installation
 

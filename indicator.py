@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 import os
 import json
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GLib
-try:
-    from gi.repository import AppIndicator3 as AppIndicator
-except:
-    from gi.repository import AppIndicator
+from gi.repository import AppIndicator3 as AppIndicator
 from urllib2 import urlopen
 import requests
 from array import array

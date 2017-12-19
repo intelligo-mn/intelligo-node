@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import json
-import gi
-gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GLib
 from gi.repository import AppIndicator3 as AppIndicator
 from urllib2 import urlopen

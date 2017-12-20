@@ -92,10 +92,10 @@ class CryptoCoinPrice:
         try:
             self.ind.set_label(self.get_price('BTC-USD')+" | "+self.get_price('ETH-USD')+" | "+self.get_price('LTC-USD'), "")
         except Exception as e:
-            str(e)
+            print(e)
             self.ind.set_label("!", "")
         return True
-
+    
     def main(self):
         Gtk.main()
 

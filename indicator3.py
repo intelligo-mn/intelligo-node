@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# Python 3 support
 import os
 import json
 import gi
@@ -6,7 +7,7 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('AppIndicator3', '0.1')
 from gi.repository import Gtk, GLib
 from gi.repository import AppIndicator3 as AppIndicator
-from urllib2 import urlopen
+from urllib.request import urlopen
 import requests
 from array import array
 
@@ -90,11 +91,11 @@ class CryptoCoinPrice:
     def handler_timeout(self):
         try:
             self.ind.set_label(self.get_price('BTC-USD')+" | "+self.get_price('ETH-USD')+" | "+self.get_price('LTC-USD'), "")
-        except Exception, e:
-            print str(e)
+        except Exception as e:
+            print(e)
             self.ind.set_label("!", "")
         return True
-
+    
     def main(self):
         Gtk.main()
 

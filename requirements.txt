@@ -1,4 +1,0 @@
-
-python-gi
-python-requests
-gir1.2-appindicator3-0.1

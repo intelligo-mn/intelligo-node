@@ -3,4 +3,4 @@
     - "2.7"
     - "nightly"
   script:
-    - python main.py
+    - python indicator.py

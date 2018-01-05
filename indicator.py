@@ -10,7 +10,7 @@ from urllib2 import urlopen
 import requests
 from array import array
 
-class CryptoCoinPrice:
+class CryptoCoinPrice(object):
     def __init__(self):
 
         self.ind = AppIndicator.Indicator.new(

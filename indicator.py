@@ -94,6 +94,9 @@ class CryptoCoinPrice(object):
             return u'\u20AC'
         elif currency == 'USD':
             return u'\u0024'
+	elif currency == 'GDP':
+		return u'\u00A3'
+	
         else:
             return currency
 

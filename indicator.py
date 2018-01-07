@@ -59,6 +59,9 @@ class CryptoCoinPrice(object):
 
     def handler_menu_reload(self, evt):
         self.handler_timeout()
+        
+    def currency_menu(self):
+		pass
 
     def about_window(self, source):
         dialog = Gtk.AboutDialog()

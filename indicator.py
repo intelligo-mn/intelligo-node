@@ -37,7 +37,14 @@ class CryptoCoinPrice(object):
         item.connect("activate", self.about_window)
         item.show()
         self.menu.append(item)
-
+        
+        item = Gtk.MenuItem()
+        item.set_label("currency")
+        item.show()
+        self.menu.append(item)
+ 
+        
+        
         item = Gtk.MenuItem()
         item.set_label("Exit")
         item.connect("activate", self.handler_menu_exit)

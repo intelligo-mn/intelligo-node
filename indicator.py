@@ -8,7 +8,6 @@ from gi.repository import Gtk, GLib
 from gi.repository import AppIndicator3 as AppIndicator
 import requests
 
-
 class CryptoCoinPrice:
     def __init__(self):
 
@@ -58,9 +57,9 @@ class CryptoCoinPrice:
         dialog = Gtk.AboutDialog()
         dialog.set_program_name('Cryptocoin Price')
         dialog.set_version('1.0.0')
-        dialog.set_copyright('Copyright 2017 Techstar, Inc.')
+        dialog.set_copyright('Copyright 2018 Techstar, Inc.')
         dialog.set_license('MIT License\n' +
-                           'Copyright (c) 2017 Techstar, Inc.\n\n' +
+                           'Copyright (c) 2018 Techstar, Inc.\n\n' +
                            'Permission is hereby granted, free of charge, to any person obtaining a \n' +
                            'copy of this software and associated documentation files (the "Software"), \n' +
                            'to deal in the Software without restriction, including without limitation \n' +
@@ -76,7 +75,7 @@ class CryptoCoinPrice:
                            'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.')
         dialog.set_wrap_license(True)
         dialog.set_comments('An Ubuntu desktop indicator displays prices of Bitcoin, Ethereum, Litecoin etc.')
-        dialog.set_website('https://github.com/techstar-inc/cryptocoin-price')
+        dialog.set_website('https://www.techstar.cloud')
 
         dialog.run()
         dialog.destroy()
@@ -109,7 +108,6 @@ class CryptoCoinPrice:
     @staticmethod
     def main():
         Gtk.main()
-
 
 if __name__ == "__main__":
     ind = CryptoCoinPrice()

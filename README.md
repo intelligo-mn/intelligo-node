@@ -39,7 +39,7 @@ Ubuntu 17.10 Screen shot
 ### Installation
 
 ```
-git clone https://github.com/techstar-inc/cryptocoin-price.git
+git clone https://github.com/techstar-cloud/cryptocoin-indicator.git
 
 cd cryptocoin-price
 

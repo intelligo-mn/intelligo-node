@@ -1,7 +1,10 @@
 ## Cryptocoin Price Indicator
-[![Build Status](https://travis-ci.org/debajyotiguha11/cryptocoin-price.svg?branch=master)](https://travis-ci.org/debajyotiguha11/cryptocoin-price)
+
 <p align="left">
 
+<a href="https://travis-ci.org/techstar-cloud/cryptocoin-indicator">
+        <img src="https://travis-ci.org/techstar-cloud/cryptocoin-indicator.svg?branch=master"
+            alt="Build Status"></a>
 <a href="https://github.com/techstar-cloud/cryptocoin-indicator/issues">
         <img src="https://img.shields.io/github/issues/techstar-cloud/cryptocoin-indicator.svg"
             alt="Issues"></a>

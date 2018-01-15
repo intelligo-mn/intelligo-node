@@ -1,0 +1,12 @@
+language: python
+sudo: true
+python:
+    - "2.7"
+install:
+- sudo apt-get install python-gobject
+- sudo apt-get install python-dbus
+- sudo apt-get install python-gi
+- sudo apt-get install python-requests
+- sudo apt-get install gir1.2-appindicator3-0.1
+script:
+- python indicator.py

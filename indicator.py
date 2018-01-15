@@ -60,7 +60,7 @@ class CryptoCoinPrice:
         self.ind.set_status(AppIndicator.IndicatorStatus.ACTIVE)
         self.build_menu()
 
-        self.exchange='bittrex'
+        self.exchange='coinbase'
         self.market = 'ltc'
         self.handler_timeout()
         GLib.timeout_add_seconds(60 * 3, self.handler_timeout)
@@ -181,4 +181,4 @@ class CryptoCoinPrice:
 
 if __name__ == "__main__":
     ind = CryptoCoinPrice()
-ind.main()
+    ind.main()

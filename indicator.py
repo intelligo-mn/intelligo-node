@@ -8,6 +8,7 @@ from gi.repository import Gtk, GLib
 from gi.repository import AppIndicator3 as AppIndicator
 import requests
 
+
 class Bittrex:
     def __init__(self, coin, base='btc'):
         self.code = base+'-'+coin
@@ -22,6 +23,31 @@ class Bittrex:
             result = json['result']
             return 'Bid: '+str(result['Bid'])+' | Ask: '+str(result['Ask'])+' | Last: '+str(result['Last'])
 
+
+class Binance:
+    def __init__(self, coin, base='btc'):
+        self.code = coin+base
+        self.code.upper()
+
+    def run(self):
+        url = 'https://api.binance.com/api/v1/ticker/price?symbol='+self.code
+        response = request.get(url)
+        json = response.json()
+        return 'Bid: - | Ask: - | Last: '+str(json['price'])
+
+
+class VIP:
+    def __init__(self, coin, base='btc'):
+        self.code = coin+'_'+base
+
+    def run(self):
+        url = 'https://vip.bitcoin.co.id/api/'+self.code+'/ticker'
+        response = request.get(url)
+        json = response.json()
+        result = json['ticker']
+        return 'Bid: '+str(result['buy']+' | Ask: '+str(result['sell']+' | Last: '+str(result['last'])
+
+
 class CryptoCoinPrice:
     def __init__(self):
 
@@ -35,7 +61,7 @@ class CryptoCoinPrice:
         self.build_menu()
 
         self.exchange='bittrex'
-        self.market = 'xlm'
+        self.market = 'ltc'
         self.handler_timeout()
         GLib.timeout_add_seconds(60 * 3, self.handler_timeout)
 

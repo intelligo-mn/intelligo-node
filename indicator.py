@@ -31,7 +31,7 @@ class Binance:
 
     def run(self):
         url = 'https://api.binance.com/api/v1/ticker/price?symbol='+self.code
-        response = request.get(url)
+        response = requests.get(url)
         json = response.json()
         return 'Bid: - | Ask: - | Last: '+str(json['price'])
 
@@ -42,10 +42,10 @@ class VIP:
 
     def run(self):
         url = 'https://vip.bitcoin.co.id/api/'+self.code+'/ticker'
-        response = request.get(url)
+        response = requests.get(url)
         json = response.json()
         result = json['ticker']
-        return 'Bid: '+str(result['buy']+' | Ask: '+str(result['sell']+' | Last: '+str(result['last'])
+        return 'Bid: '+str(result['buy'])+' | Ask: '+str(result['sell'])+' | Last: '+str(result['last'])
 
 
 class CryptoCoinPrice:
@@ -170,7 +170,7 @@ class CryptoCoinPrice:
                 self.ind.set_label(m.run(),"")
             elif self.exchange == 'coinbase':
                 self.ind.set_label(self.get_price('BTC-USD') + " | " + self.get_price('ETH-USD') + " | " + self.get_price('LTC-USD'), "")
-        except Exception, e:
+        except Exception as e:
             print(str(e))
             self.ind.set_label("!","")
         return True

@@ -1,6 +1,0 @@
-
-To-do list of week commencing 15 jan -2018
-
-Finsh currency combo-box
-Add Apperance to menu
-write shell script to move indicator rc.local file to start on start up

@@ -9,6 +9,7 @@ from gi.repository import AppIndicator3 as AppIndicator
 import requests
 
 
+
 class Bittrex:
     def __init__(self, coin, base='btc'):
         self.code = base+'-'+coin
@@ -48,7 +49,7 @@ class VIP:
         return 'Bid: '+str(result['buy'])+' | Ask: '+str(result['sell'])+' | Last: '+str(result['last'])
 
 
-class CryptoCoinPrice:
+class CryptoCoinPrice(object):
     def __init__(self):
 
         self.menu = Gtk.Menu()
@@ -84,7 +85,14 @@ class CryptoCoinPrice:
         item.connect("activate", self.about_window)
         item.show()
         self.menu.append(item)
-
+        
+        item = Gtk.MenuItem()
+        item.set_label("Currency")
+        item.show()
+        self.menu.append(item)
+ 
+        
+        
         item = Gtk.MenuItem()
         item.set_label("Exit")
         item.connect("activate", self.handler_menu_exit)
@@ -100,6 +108,9 @@ class CryptoCoinPrice:
 
     def handler_menu_reload(self, evt):
         self.handler_timeout()
+        
+    def currency_menu(self):
+		pass
 
     @staticmethod
     def about_window(source):
@@ -160,6 +171,9 @@ class CryptoCoinPrice:
             return u'\u20AC'
         elif currency == 'USD':
             return u'\u0024'
+	elif currency == 'GDP':
+		return u'\u00A3'
+	
         else:
             return currency
 

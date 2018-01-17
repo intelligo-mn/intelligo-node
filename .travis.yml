@@ -1,5 +1,7 @@
 language: python
-sudo: true
+sudo: required
+dist: trusty
+group: deprecated-2017Q4
 python:
     - "2.7"
 install:

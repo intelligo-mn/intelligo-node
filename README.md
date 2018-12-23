@@ -32,15 +32,15 @@ An Ubuntu desktop indicator (top bar widget) that displays prices of Cryptocoin 
 
 Ubuntu 17.10 Screen shot
 
-![screenshot](https://github.com/techstar-cloud/cryptocoin-indicator/blob/master/img/screen.png)
+![screenshot](https://github.com/opengineer/cryptocoin-indicator/blob/master/img/screen.png)
 
-![screenshot](https://github.com/techstar-cloud/cryptocoin-indicator/blob/master/img/screen3.png)
+![screenshot](https://github.com/opengineer/cryptocoin-indicator/blob/master/img/screen3.png)
 
 
 ### Installation
 
 ```
-git clone https://github.com/techstar-cloud/cryptocoin-indicator.git
+git clone https://github.com/opengineer/cryptocoin-indicator.git
 
 cd cryptocoin-indicator
 
@@ -59,7 +59,7 @@ make run
 
 ### Contributing
 
-See <a href="https://github.com/techstar-cloud/cryptocoin-indicator/issues">
+See <a href="https://github.com/opengineer/cryptocoin-indicator/issues">
         <img src="https://img.shields.io/github/issues/techstar-cloud/cryptocoin-indicator.svg"
             alt="Issues"></a>
 .

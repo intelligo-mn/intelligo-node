@@ -1,74 +1,45 @@
-## Cryptocoin Price Indicator
-
 <p align="left">
-<a class="badge-align" href="https://www.codacy.com/app/tortuvshin/cryptocoin-price?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=techstar-cloud/cryptocoin-indicator&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/b26eba42a2da46f3aa9dc5598447b8ed"/></a>
-<a href="https://travis-ci.org/techstar-cloud/cryptocoin-indicator">
-<img src="https://travis-ci.org/techstar-cloud/cryptocoin-indicator.svg?branch=master"
-    alt="Build Status"></a>
-<a href="https://github.com/techstar-cloud/cryptocoin-indicator/issues">
-<img src="https://img.shields.io/github/issues/techstar-cloud/cryptocoin-indicator.svg"
-    alt="Issues"></a>
-<a href="https://github.com/techstar-cloud/cryptocoin-indicator/fork">
-<img src="https://img.shields.io/github/forks/techstar-cloud/cryptocoin-indicator.svg?style=social&label=Fork"
-    alt="Forks"></a>
-<a href="https://github.com/techstar-cloud/cryptocoin-indicator/stargazers">
-<img src="https://img.shields.io/github/stars/techstar-cloud/cryptocoin-indicator.svg?style=social&label=Stars"
-    alt="Stars"></a>
-<a href="https://github.com/tortuvshin/">
-<img src="https://img.shields.io/github/followers/tortuvshin.svg?style=social&label=Follow"
-    alt="Followers"></a>
-<a href="https://raw.githubusercontent.com/techstar-cloud/cryptocoin-indicator/master/LICENSE">
-<img src="https://img.shields.io/badge/license-MIT-blue.svg"
-    alt="LICENSE"></a>
-<a href="https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D">
-<img src="https://img.shields.io/twitter/url/https/github.com/techstar-cloud/cryptocoin-indicator.svg?style=social"
-    alt="Tweet"></a>
-
+    <a class="badge-align" href="https://www.codacy.com/app/tortuvshin/intelligo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=techstar-inc/intelligo&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c7f41b9927fe4d2a9b18e564e23294cc"/></a>
+   <a href="https://www.npmjs.com/package/intelligo">
+      <img alt="npm downloads" src="https://img.shields.io/npm/dt/intelligo.svg?style=flat-square">
+    </a>
+    <a href="https://www.npmjs.com/package/intelligo">
+        <img alt="undefined" src="https://img.shields.io/npm/v/intelligo.svg?style=flat-square">
+        </a>
+    <a href="https://github.com/tortuvshin/">
+        <img src="https://img.shields.io/github/followers/tortuvshin.svg?style=social&label=Follow"
+            alt="Followers"></a>
+    <a href="https://github.com/intelligo-systems/intelligo/blob/master/LICENSE">
+            <img alt="License" src="https://img.shields.io/github/license/intelligo-systems/intelligo.svg?colorB=blue&style=flat-square">
+           </a>
+      <a href="https://twitter.com/intent/tweet?text=Wow:&url=https://github.com/intelligo-systems/intelligo">
+     <img alt="Tweet" src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social">
+     </a>
 </p>
 
-An Ubuntu desktop indicator (top bar widget) that displays prices of Cryptocoin as on the COINBASE API.
+This project generated with [`Intelligo chatbot generator`](https://github.com/intelligo-systems/intelligo-generator) .
 
-### Screen 
+## Quick Start
 
-Ubuntu 17.10 Screen shot
+Set the values in `config/default.json` before running the bot. Using your Facebook Page's / App's `ACCESS_TOKEN`, `VERIFY_TOKEN` and `APP_SECRET`
 
-![screenshot](https://github.com/opengineer/cryptocoin-indicator/blob/master/img/screen.png)
+- `ACCESS_TOKEN:` A page access token for your app, found under App -> Products -> Messenger -> Settings -> Token Generation
+- `VERIFY_TOKEN:` A token that verifies your webhook is being called. Can be any value, but needs to match the value in App -> Products -> Webhooks -> Edit Subscription
+- `APP_SECRET:` A app secret for your app, found under App -> Settings -> Basic -> App Secret -> Show
 
-![screenshot](https://github.com/opengineer/cryptocoin-indicator/blob/master/img/screen3.png)
+**Note:** If you don't know how to get these tokens, take a look at Facebook's [Quick Start Guide](https://developers.facebook.com/docs/messenger-platform/guides/quick-start) .
 
+Install dependencies:
 
-### Installation
-
-```
-git clone https://github.com/opengineer/cryptocoin-indicator.git
-
-cd cryptocoin-indicator
-
-sudo apt-get install python-gi
-sudo apt-get install python-requests
-sudo apt-get install gir1.2-appindicator3-0.1
-
-python indicator.py 
+```bash
+$ npm install
 ```
 
-### Or 
+Start your bot server:
+
+```bash
+$ npm start
 ```
-make install
-make run
-```
+## Further help
 
-### Contributing
-
-See <a href="https://github.com/opengineer/cryptocoin-indicator/issues">
-        <img src="https://img.shields.io/github/issues/techstar-cloud/cryptocoin-indicator.svg"
-            alt="Issues"></a>
-.
-
-- If you found any problems, please report on issues page.
-- If you made any change, send me pull request.
-
-
-### License
-  <a href="https://raw.githubusercontent.com/techstar-cloud/cryptocoin-indicator/master/LICENSE">
-        <img src="https://img.shields.io/badge/license-MIT-blue.svg"
-    alt="LICENSE"></a>
+To get more help on the Intelligo framework go check out the [intelligo](https://github.com/intelligo-systems/intelligo/)  README.

@@ -1,0 +1,11 @@
+{
+    "name": "slack-bot",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+        "intelligo": "1.0.14"
+    }
+  }

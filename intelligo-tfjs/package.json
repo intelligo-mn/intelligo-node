@@ -1,7 +1,7 @@
 {
-    "name": "messenger-bot",
-    "version": "0.0.0",
-    "private": true,
+    "name": "brainjsbot",
+    "version": "1.0.0",
+    "private": false,
     "scripts": {
       "start": "node index.js"
     },
